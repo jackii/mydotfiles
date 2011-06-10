@@ -36,8 +36,11 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplUseSingleClick = 0
 
 " Enhance '<' '>' , do not need to reselect the block after shift it.
-vnoremap <unique> < <gv
-vnoremap <unique> > >gv
+" Already set for GUI Mode
+if !has("gui_running")
+  vnoremap <unique> < <gv
+  vnoremap <unique> > >gv
+endif
 
 " Make arrow keys work in visual mode under Windows
 vnoremap <Left> h
