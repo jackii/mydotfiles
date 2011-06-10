@@ -1,0 +1,60 @@
+colorscheme jellybeans+
+set showcmd                   " display incomplete commands
+set incsearch                 " do incremental searchin
+
+set shiftround                " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch                 " set show matching parenthesis
+set smarttab                  " insert tabs on the start of a line according to shiftwidth, not tabstop
+
+set history=1000              " remember more commands and search history
+set undolevels=1000           " use many muchos levels of undo
+set wildignore+=*.swp,*.bak,*.pyc,*.class
+set nobackup
+set noswapfile
+
+" replace colon : to semi-colon ; e.g. instead of :w use ;w
+nnoremap ; :
+
+" changes behaviour so that it jumps to the next row in the editor
+nnoremap j gj
+nnoremap k gk
+
+" clearing highlighted searches, press ,/ to clear highlighting of search
+nmap <silent> ,/ :nohlsearch<CR>
+
+" command T
+let g:CommandTMatchWindowAtTop=1
+
+" MiniBufExpl
+map <Leader>b :MiniBufExplorer<cr>
+" enable the mapping of Control + Arrow Keys to window movement commands
+let g:miniBufExplMapWindowNavArrows = 1
+" enable the optional mapping of <C-TAB> and <C-S-TAB> to a 
+" function that will bring up the next or previous buffer in the current window
+let g:miniBufExplMapCTabSwitchBufs = 1 
+"single click on tabs rather than double clicking
+let g:miniBufExplUseSingleClick = 0
+
+" Enhance '<' '>' , do not need to reselect the block after shift it.
+vnoremap <unique> < <gv
+vnoremap <unique> > >gv
+
+" Make arrow keys work in visual mode under Windows
+vnoremap <Left> h
+vnoremap <Right> l
+vnoremap <Up> k
+vnoremap <Down> j
+
+" Move lines of text up or down.
+" The mappings work in normal, insert and visual modes, allowing you to move
+" the current line, or a selected block of lines.
+nnoremap <D-j> :m+<CR>==
+nnoremap <D-k> :m-2<CR>==
+inoremap <D-j> <Esc>:m+<CR>==gi
+inoremap <D-k> <Esc>:m-2<CR>==gi
+vnoremap <D-j> :m'>+<CR>gv=gv
+vnoremap <D-k> :m-2<CR>gv=gv
+
+" Move to the previous/next line after reaching first/last character in the line
+set whichwrap+=<,>,h,l,[,]
+
