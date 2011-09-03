@@ -29,3 +29,6 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "/Users/jacky/.rvm/scripts/rvm" ]] && source "/Users/jacky/.rvm/scripts/rvm"
 
 alias du="du -h"
+
+export NODE_PATH=/usr/local/lib/node_modules
+
