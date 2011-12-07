@@ -1,3 +1,7 @@
 vim_plugin_task "zencoding", "git://github.com/mattn/zencoding-vim.git"
 vim_plugin_task "minibufexpl", "git://github.com/fholgado/minibufexpl.vim.git"
 vim_plugin_task "delimitMate", "git://github.com/Raimondi/delimitMate.git"
+vim_plugin_task "vim-addon-mw-utils","git://github.com/MarcWeber/vim-addon-mw-utils.git"
+vim_plugin_task "tlib", "git://github.com/tomtom/tlib_vim.git"
+vim_plugin_task "snippets", "git://github.com/honza/snipmate-snippets.git"
+vim_plugin_task "snipmate", "git://github.com/garbas/vim-snipmate.git"

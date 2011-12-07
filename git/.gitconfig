@@ -1,0 +1,6 @@
+[user]
+	name = Jacky
+	email = jacky2chong@gmail.com
+[core]
+	quotepath = false
+	editor = /usr/bin/vim

@@ -26,9 +26,13 @@ plugins=(brew bundler cap gem git git-flow github osx rails3 rvm textmate vi-mod
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-[[ -s "/Users/jacky/.rvm/scripts/rvm" ]] && source "/Users/jacky/.rvm/scripts/rvm"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 alias du="du -h"
 
-export NODE_PATH=/usr/local/lib/node_modules
+alias cakephp="cd ~/Sites/cakephp/"
 
+export NODE_PATH=/usr/local/lib/node_modules
+LC_CTYPE=en_US.UTF-8

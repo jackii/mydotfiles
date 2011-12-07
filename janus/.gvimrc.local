@@ -1,4 +1,4 @@
-set guifont=Inconsolata:h15
+set guifont=Inconsolata:h13
 set guioptions-=T             " hide toolbar
 
 " Include user's local vim config
