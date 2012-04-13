@@ -1,8 +1,13 @@
-set guifont=Inconsolata:h13
+set guifont=Inconsolata:h14
 set guioptions-=T             " hide toolbar
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+let g:solarized_termcolors=256
+set t_Co=16
+set background=light
+colorscheme solarized
 

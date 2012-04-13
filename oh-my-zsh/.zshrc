@@ -33,6 +33,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X
 alias du="du -h"
 
 alias cakephp="cd ~/Sites/cakephp/"
+alias redmine="cd ~/Sites/apps/redmine-1.2.2 && ruby script/server webrick -e production -d"
+alias jenkins="java -jar /Applications/Jenkins/jenkins.war --httpPort=8000 --ajp13Port=9000 > /tmp/jetkins.log 2>&1 &"
 
 export NODE_PATH=/usr/local/lib/node_modules
 LC_CTYPE=en_US.UTF-8
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

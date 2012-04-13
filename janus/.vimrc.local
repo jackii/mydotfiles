@@ -1,3 +1,4 @@
+" colorscheme solarized
 colorscheme jellybeans+
 set showcmd                   " display incomplete commands
 set incsearch                 " do incremental searchin
@@ -12,6 +13,10 @@ set wildignore+=*.swp,*.bak,*.pyc,*.class
 set nobackup
 set noswapfile
 
+" 
+if exists('+colorcolumn')
+    set colorcolumn=80
+endif
 
 " replace colon : to semi-colon ; e.g. instead of :w use ;w
 nnoremap ; :
@@ -59,3 +64,4 @@ vnoremap <D-k> :m-2<CR>gv=gv
 " Move to the previous/next line after reaching first/last character in the line
 set whichwrap+=<,>,h,l,[,]
 
+:imap <D-]> <Esc>
