@@ -1,0 +1,89 @@
+" colorscheme solarized
+colorscheme jellybeans+
+set showcmd                   " display incomplete commands, shown in bottom right corner
+
+set shiftround                " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch                 " set show matching parenthesis
+set smarttab                  " insert tabs on the start of a line according to shiftwidth, not tabstop
+
+set history=1000              " remember more commands and search history
+set undolevels=1000           " use many more levels of undo
+set wildignore+=*.swp,*.bak,*.pyc,*.class
+set nobackup
+set noswapfile
+set showmode
+
+if exists('+colorcolumn')
+  set colorcolumn=80
+endif
+
+" clearing highlighted searches, press ,/ to clear highlighting of search
+nmap <silent> ,/ :nohlsearch<CR>
+
+" ctrlp, replaces command-t
+let g:ctrlp_match_window_bottom = 0
+" Buffergator
+" height of window
+let g:buffergator_split_size = 30
+
+" MiniBufExpl
+"map <Leader>b :MiniBufExplorer<cr>
+" enable the mapping of Control + Arrow Keys to window movement commands
+"let g:miniBufExplMapWindowNavArrows = 1
+" enable the optional mapping of <C-TAB> and <C-S-TAB> to a
+" function that will bring up the next or previous buffer in the current window
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"single click on tabs rather than double clicking
+"let g:miniBufExplUseSingleClick = 0
+
+" Enhance '<' '>' , do not need to reselect the block after shift it.
+vnoremap < <gv
+vnoremap > >gv
+
+" enable the mapping of Control + Arrow Keys to window movement commands
+nnoremap <silent> <C-Right> <c-w>l
+nnoremap <silent> <C-Left> <c-w>h
+nnoremap <silent> <C-Up> <c-w>k
+nnoremap <silent> <C-Down> <c-w>j
+
+
+" Move lines of text up or down.
+" The mappings work in normal, insert and visual modes, allowing you to move
+" the current line, or a selected block of lines.
+nnoremap <D-j> :m+<CR>==
+nnoremap <D-k> :m-2<CR>==
+inoremap <D-j> <Esc>:m+<CR>==gi
+inoremap <D-k> <Esc>:m-2<CR>==gi
+vnoremap <D-j> :m'>+<CR>gv=gv
+vnoremap <D-k> :m-2<CR>gv=gv
+"the below also perform the same functions
+" Bubble single lines
+"nmap <C-Up> [e
+"nmap <C-Down> ]e
+"nmap <C-k> [e
+"nmap <C-j> ]e
+
+" Bubble multiple lines
+"vmap <C-Up> [egv
+"vmap <C-Down> ]egv
+"vmap <C-k> [egv
+"vmap <C-j> ]egv
+
+" Move to the previous/next line after reaching first/last character in the line
+set whichwrap+=<,>,h,l,[,]
+
+" Map Command-] to ESC
+:imap <D-]> <Esc>
+
+" Customize the status line
+if has("statusline") && !&cp
+  set laststatus=2  " always show the status bar
+
+  " Start the status line
+  set statusline=%f\ %m\ %r
+  set statusline+=%=
+  set statusline+=Ln:%l/%L[%p%%]\ Col:%v
+endif
+
+" traveling without moving, keep the cursor in middle of screen
+:let &scrolloff=9999-&scrolloff
