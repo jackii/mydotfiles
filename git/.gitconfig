@@ -1,9 +1,10 @@
 [user]
-  name = Jacky
-  email = jacky2chong@gmail.com
+	name = Jacky
+	email = jacky2chong@gmail.com
 [core]
-  quotepath = false
-  editor = /usr/bin/vim
+	quotepath = false
+	editor = vim
+	autocrlf = input
 [difftool "kdiff3"]
   path = /usr/local/bin/kdiff3
   trustExitCode = false
@@ -15,6 +16,10 @@
   path = /usr/local/bin/kdiff3
   trustExitCode = false
 [mergetool]
-  keepBackup = false
+	keepBackup = false
 [merge]
   tool = kdiff3
+[gui]
+	recentrepo = /Users/jacky/Sites/rails/codes/dxe_cny
+[push]
+	default = simple
